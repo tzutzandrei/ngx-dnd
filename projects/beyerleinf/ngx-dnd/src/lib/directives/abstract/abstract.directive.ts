@@ -49,6 +49,7 @@ export abstract class AbstractDirective {
 
       if (isPresent(event.dataTransfer)) {
         event.dataTransfer.dropEffect = this.config.dropEffect.name;
+        event.dataTransfer.setData('text', '');
       }
 
       return false;
